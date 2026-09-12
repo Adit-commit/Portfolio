@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Soni | AI/ML & Tech Portfolio</title>
+  <meta name="description" content="Personal portfolio of Aditya Soni - 1st Year B.Tech Student, AI/ML enthusiast focused on real-world projects and startup ideas." />
+  <meta name="keywords" content="Aditya Soni, AI, ML, Machine Learning, Python, DSA, Portfolio, ST. Peter's Dabra" />
+
+  <!-- Google Fonts: Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- Interactive Neural Particles Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Ambient Glowing Orbs Background -->
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-purple"></div>
+  <div class="ambient-glow glow-emerald"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-code">&lt;</span>
+        <span class="brand-name">Aditya<span class="neon-dot">.</span>Soni</span>
+        <span class="brand-code">/&gt;</span>
+        <span class="status-badge"><span class="pulse-dot"></span> B.Tech 1st Year</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active"><i class="fa-solid fa-house-chimney"></i> Home</a>
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> About</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-microchip"></i> Skills</a>
+        <a href="#certification" class="nav-link"><i class="fa-solid fa-award"></i> Certificate</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-satellite-dish"></i> Contact</a>
+      </nav>
+
+      <!-- Nav CTA Button -->
+      <div class="nav-actions">
+        <button id="nav-resume-btn" class="btn btn-outline-cyan btn-sm">
+          <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="drawer-logo">&lt;AS /&gt;</span>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-links">
+      <a href="#home" class="drawer-link"><i class="fa-solid fa-house-chimney"></i> Home</a>
+      <a href="#about" class="drawer-link"><i class="fa-solid fa-user-astronaut"></i> About</a>
+      <a href="#skills" class="drawer-link"><i class="fa-solid fa-microchip"></i> Skills</a>
+      <a href="#certification" class="drawer-link"><i class="fa-solid fa-award"></i> Certificate & Resume</a>
+      <a href="#contact" class="drawer-link"><i class="fa-solid fa-satellite-dish"></i> Contact</a>
+    </div>
+    <div class="drawer-actions">
+      <button id="drawer-resume-btn" class="btn btn-neon-cyan btn-block">
+        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== 1. HOME / HERO SECTION ==================== -->
+    <section id="home" class="hero-section section-padding">
+      <div class="container hero-container">
+        <!-- Hero Text Content -->
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-badge">
+            <span class="pulse-indicator"></span>
+            <span>Focus: Practical AI/ML & Startup Venturing</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hey, I'm <span class="neon-text-gradient">Aditya Soni</span>
+          </h1>
+
+          <div class="hero-typewriter-wrapper">
+            <span class="typewriter-prefix">I am passionate about </span>
+            <span class="typewriter-text" id="typewriter-text"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-bio">
+            A 1st-year <strong>B.Tech</strong> undergraduate driven by curiosity in 
+            <strong>Artificial Intelligence & Machine Learning</strong>. I believe true mastery lies in 
+            bridging mathematical models with real-world impact—integrating AI architectures into 
+            viable, scalable <strong>startup ideas</strong> that solve tangible human problems.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#skills" class="btn btn-neon-cyan">
+              <i class="fa-solid fa-code"></i> Explore Skills
+            </a>
+            <a href="#certification" class="btn btn-outline-purple">
+              <i class="fa-solid fa-certificate"></i> AI Certificate
+            </a>
+            <button id="hero-resume-btn" class="btn btn-glass">
+              <i class="fa-solid fa-download"></i> Get Resume
+            </button>
+          </div>
+
+          <!-- Quick Metrics Ticker -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-val neon-cyan">1st</span>
+              <span class="metric-lbl">Year B.Tech</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val neon-purple">AI/ML</span>
+              <span class="metric-lbl">Core Focus</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-val neon-emerald">100%</span>
+              <span class="metric-lbl">Builder Mindset</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Profile Showcase -->
+        <div class="hero-visual reveal-on-scroll">
+          <div class="profile-card-3d">
+            <!-- Neon Orbit Rings -->
+            <div class="orbit-ring ring-outer"></div>
+            <div class="orbit-ring ring-inner"></div>
+
+            <!-- Profile Frame -->
+            <div class="profile-frame">
+              <div class="profile-glow-halo"></div>
+              <div class="profile-image-container">
+                <img src="assets/profile.jpg" alt="Aditya Soni - AI/ML B.Tech Student" class="profile-photo-img" />
+                <div class="profile-name-tag">
+                  <span class="tag-title">Aditya Soni</span>
+                  <span class="tag-subtitle">AI/ML Apprentice</span>
+                </div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge badge-1">
+                <i class="fa-brands fa-python"></i> Python 3
+              </div>
+              <div class="floating-badge badge-2">
+                <i class="fa-solid fa-brain"></i> Scikit-Learn
+              </div>
+              <div class="floating-badge badge-3">
+                <i class="fa-solid fa-rocket"></i> Startup Mindset
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. ABOUT SECTION ==================== -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll text-center">
+          <span class="section-subtitle">&lt;who-am-i /&gt;</span>
+          <h2 class="section-title">About <span class="neon-cyan">Me</span></h2>
+          <div class="section-title-bar"></div>
+          <p class="section-desc">
+            Education foundations, my journey with computational thinking, and the diverse interests that fuel my creativity.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Education Card -->
+          <div class="about-card education-card glass-card reveal-on-scroll">
+            <div class="card-icon-wrap cyan-glow">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3 class="card-heading">Education History</h3>
+            
+            <div class="timeline-box">
+              <div class="timeline-item">
+                <div class="timeline-marker cyan"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">2025 – Present • Undergrad</span>
+                  <h4 class="timeline-title">Bachelor of Technology (B.Tech) — 1st Year</h4>
+                  <p class="timeline-institution">Engineering & Applied Computing</p>
+                  <p class="timeline-text">
+                    Building a rock-solid foundation in Computer Science, Data Structures, Discrete Mathematics, and algorithmic logic. Actively participating in coding hackathons and AI study groups.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-marker purple"></div>
+                <div class="timeline-content">
+                  <span class="timeline-badge">Schooling & Foundation</span>
+                  <h4 class="timeline-title">High School & Intermediate</h4>
+                  <p class="timeline-institution">ST. Peter's School, Dabra (M.P)</p>
+                  <p class="timeline-text">
+                    Completed my schooling from <strong>ST. Peter's, Dabra (M.P)</strong>. Fostered my earliest passion for science, mathematical reasoning, computer applications, and analytical problem-solving.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Short Story Card (AI-Generated Narrative) -->
+          <div class="about-card story-card glass-card reveal-on-scroll">
+            <div class="card-icon-wrap purple-glow">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="card-heading">The Origin Story <span class="badge-ai">AI Curated</span></h3>
+            
+            <div class="story-content">
+              <div class="code-comment">// "From Classroom Curiosities to Neural Architectures"</div>
+              <p class="story-paragraph">
+                Back during my school days at <em>ST. Peter’s in Dabra</em>, I was fascinated not just by what technology did, but by the quiet logic running underneath it. When others saw programs as magic boxes, I saw puzzles waiting to be deconstructed.
+              </p>
+              <p class="story-paragraph">
+                Stepping into my 1st year of B.Tech opened the floodgates to <strong>Artificial Intelligence & Machine Learning</strong>. I quickly realized that the future won't be built by passive learners memorizing syntax, but by engineers who can marry <em>data algorithms</em> with <em>entrepreneurial velocity</em>.
+              </p>
+              <p class="story-paragraph highlight-quote">
+                &ldquo;My mission is to transform raw algorithms into practical applications that can fuel viable startups and solve real-world community challenges.&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hobbies Section (3 Interactive Cards) -->
+        <div class="hobbies-wrapper reveal-on-scroll">
+          <div class="hobbies-header text-center">
+            <h3 class="sub-heading">What Energizes Me Beyond Code</h3>
+            <p class="sub-desc">Diverse hobbies that sharpen my endurance, visual storytelling, and business strategy.</p>
+          </div>
+
+          <div class="hobbies-grid">
+            <!-- Hobby 1: Cycling -->
+            <div class="hobby-card glass-card hover-glow-cyan">
+              <div class="hobby-icon-box">
+                <i class="fa-solid fa-person-biking"></i>
+              </div>
+              <h4 class="hobby-title">Cycling & Trail Riding</h4>
+              <p class="hobby-desc">
+                Long morning rides and outdoor trails give me rhythm, physical endurance, and clear mental bandwidth to untangle complex coding problems.
+              </p>
+              <div class="hobby-tag">#Endurance & Focus</div>
+            </div>
+
+            <!-- Hobby 2: Exploring Cinema Genres -->
+            <div class="hobby-card glass-card hover-glow-purple">
+              <div class="hobby-icon-box">
+                <i class="fa-solid fa-film"></i>
+              </div>
+              <h4 class="hobby-title">Exploring Cinema Genres</h4>
+              <p class="hobby-desc">
+                From mind-bending sci-fi to psychological thrillers and neo-noir classics. I analyze narrative arcs, cinematography, visual color grading, and thematic depth.
+              </p>
+              <div class="hobby-tag">#Narrative & Visuals</div>
+            </div>
+
+            <!-- Hobby 3: Business Case Studies -->
+            <div class="hobby-card glass-card hover-glow-emerald">
+              <div class="hobby-icon-box">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h4 class="hobby-title">Business Case Studies</h4>
+              <p class="hobby-desc">
+                Dissecting how early-stage tech startups iterate to product-market fit, unit economics, moat creation, and disruptive business models in the emerging AI landscape.
+              </p>
+              <div class="hobby-tag">#Startup Strategy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. SKILLS SECTION ==================== -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll text-center">
+          <span class="section-subtitle">&lt;technical-arsenal /&gt;</span>
+          <h2 class="section-title">Core <span class="neon-purple">Skills</span> & Focus</h2>
+          <div class="section-title-bar bar-purple"></div>
+          <p class="section-desc">
+            Carefully curated technical and interpersonal competencies engineered for real-world impact and high-performance engineering.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill 1: Python Programming -->
+          <div class="skill-card glass-card reveal-on-scroll">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap python-color">
+                <i class="fa-brands fa-python"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Python Programming</h3>
+                <span class="skill-type">Core Foundation Language</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Core language for AI/ML, data analysis, and most internships. Proficient with object-oriented paradigms, scripting, numerical computation, and library ecosystems.
+            </p>
+            <div class="skill-tech-pills">
+              <span class="tech-pill">Python 3</span>
+              <span class="tech-pill">NumPy</span>
+              <span class="tech-pill">Pandas Basics</span>
+              <span class="tech-pill">OOP Architecture</span>
+            </div>
+            <div class="skill-progress-wrap">
+              <div class="progress-label">
+                <span>Application Readiness</span>
+                <span class="progress-pct neon-cyan">88%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-cyan" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 2: DSA -->
+          <div class="skill-card glass-card reveal-on-scroll">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap dsa-color">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Data Structures & Algorithms (DSA)</h3>
+                <span class="skill-type">Algorithmic Problem Solving</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Shows problem-solving ability and readiness for coding interviews. Focused on time/space complexity analysis, recursion, arrays, linked lists, stacks, queues, and tree fundamentals.
+            </p>
+            <div class="skill-tech-pills">
+              <span class="tech-pill">Arrays & Strings</span>
+              <span class="tech-pill">Binary Search</span>
+              <span class="tech-pill">Recursion</span>
+              <span class="tech-pill">Big-O Analysis</span>
+            </div>
+            <div class="skill-progress-wrap">
+              <div class="progress-label">
+                <span>Problem Solving Readiness</span>
+                <span class="progress-pct neon-purple">82%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-purple" style="width: 82%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 3: Git & GitHub -->
+          <div class="skill-card glass-card reveal-on-scroll">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap git-color">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Git & GitHub</h3>
+                <span class="skill-type">Collaboration & Version Control</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Version control, collaboration, and clean project presentation (READMEs, commits). Experienced with branching workflows, pull requests, semantic commit messages, and open-source practices.
+            </p>
+            <div class="skill-tech-pills">
+              <span class="tech-pill">Git CLI</span>
+              <span class="tech-pill">Branching & Merging</span>
+              <span class="tech-pill">Markdown READMEs</span>
+              <span class="tech-pill">GitHub Repos</span>
+            </div>
+            <div class="skill-progress-wrap">
+              <div class="progress-label">
+                <span>Version Control Hygiene</span>
+                <span class="progress-pct neon-emerald">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-emerald" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 4: Intro to Machine Learning -->
+          <div class="skill-card glass-card reveal-on-scroll">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap ml-color">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Intro to Machine Learning</h3>
+                <span class="skill-type">Practical Model Training</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Signals genuine AI/ML interest beyond just coursework. Hands-on with scikit-learn, supervised learning pipelines, Linear/Logistic regression, Decision Trees, and model evaluation metrics.
+            </p>
+            <div class="skill-tech-pills">
+              <span class="tech-pill">scikit-learn</span>
+              <span class="tech-pill">Supervised Learning</span>
+              <span class="tech-pill">Data Preprocessing</span>
+              <span class="tech-pill">Model Metrics</span>
+            </div>
+            <div class="skill-progress-wrap">
+              <div class="progress-label">
+                <span>ML Pipeline Understanding</span>
+                <span class="progress-pct neon-cyan">80%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-cyan" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 5: Problem Solving & Communication -->
+          <div class="skill-card glass-card reveal-on-scroll full-width-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap comm-color">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Problem Solving & Communication</h3>
+                <span class="skill-type">Technical Synthesis & Team Pitching</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Combines technical thinking with the ability to explain ideas clearly in teams and presentations. Capable of structuring ambiguous problems, presenting project roadmaps, and pitching startup concepts with clarity.
+            </p>
+            <div class="skill-tech-pills">
+              <span class="tech-pill">First-Principles Thinking</span>
+              <span class="tech-pill">Technical Documentation</span>
+              <span class="tech-pill">Idea Pitching</span>
+              <span class="tech-pill">Team Collaboration</span>
+              <span class="tech-pill">Active Listening</span>
+            </div>
+            <div class="skill-progress-wrap">
+              <div class="progress-label">
+                <span>Articulation & Impact</span>
+                <span class="progress-pct neon-magenta">92%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill fill-magenta" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. CERTIFICATION & RESUME SECTION ==================== -->
+    <section id="certification" class="certification-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll text-center">
+          <span class="section-subtitle">&lt;verified-credentials /&gt;</span>
+          <h2 class="section-title">Credentials & <span class="neon-emerald">Resume</span></h2>
+          <div class="section-title-bar bar-emerald"></div>
+          <p class="section-desc">
+            Explore my verified AI/ML certification and download my comprehensive 1st-year B.Tech technical resume.
+          </p>
+        </div>
+
+        <div class="cert-resume-grid">
+          <!-- Interactive Certificate Card -->
+          <div class="cert-column reveal-on-scroll">
+            <div class="cert-card-wrapper" id="certificate-card">
+              <div class="cert-border-glow"></div>
+              
+              <!-- Printable & High-Res Certificate Design -->
+              <div class="certificate-inner" id="cert-printable-area">
+                <!-- Certificate Header -->
+                <div class="cert-top-bar">
+                  <div class="cert-brand">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>GLOBAL AI CREDENTIAL COUNCIL</span>
+                  </div>
+                  <div class="cert-id">
+                    <span>ID: </span><code class="cert-code">AS-AIML-2026-X984</code>
+                  </div>
+                </div>
+
+                <!-- Certificate Title -->
+                <div class="cert-body">
+                  <div class="cert-badge-icon">
+                    <i class="fa-solid fa-certificate"></i>
+                  </div>
+                  <h4 class="cert-sub">CERTIFICATE OF EXCELLENCE</h4>
+                  <h3 class="cert-main-title">Artificial Intelligence & Machine Learning Foundations</h3>
+                  <p class="cert-awarded">This credential is autonomously generated & awarded to</p>
+                  <h2 class="cert-recipient-name">Aditya Soni</h2>
+                  <p class="cert-text">
+                    In recognition of demonstrated proficiency in Python for Scientific Computing, Foundational Machine Learning Algorithms, Scikit-Learn Model Pipelines, and First-Year Algorithmic Problem Solving.
+                  </p>
+                </div>
+
+                <!-- Certificate Footer -->
+                <div class="cert-footer">
+                  <div class="cert-signature-box">
+                    <div class="signature-line"></div>
+                    <span class="sig-name">Autonomous Verification System</span>
+                    <span class="sig-title">AI Knowledge Ledger</span>
+                  </div>
+
+                  <!-- Holographic Hologram Stamp -->
+                  <div class="cert-hologram-stamp">
+                    <div class="hologram-circle">
+                      <i class="fa-solid fa-shield-halved"></i>
+                      <span>VERIFIED</span>
+                    </div>
+                  </div>
+
+                  <div class="cert-signature-box">
+                    <div class="signature-line"></div>
+                    <span class="sig-name">Academic Assessment Board</span>
+                    <span class="sig-title">B.Tech Technical Council</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate Actions -->
+            <div class="cert-action-bar">
+              <button id="download-cert-btn" class="btn btn-neon-cyan">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Certificate
+              </button>
+              <button id="view-cert-modal-btn" class="btn btn-glass">
+                <i class="fa-solid fa-expand"></i> Fullscreen Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- Downloadable Resume Showcase Column -->
+          <div class="resume-column reveal-on-scroll">
+            <div class="resume-preview-card glass-card">
+              <div class="resume-header-preview">
+                <div class="resume-icon-circle">
+                  <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <div>
+                  <h3 class="resume-card-title">Curriculum Vitae</h3>
+                  <p class="resume-card-subtitle">Aditya Soni • B.Tech 1st Year (AI/ML Focus)</p>
+                </div>
+              </div>
+
+              <div class="resume-highlights">
+                <div class="resume-point">
+                  <i class="fa-solid fa-circle-check neon-emerald"></i>
+                  <span><strong>Education:</strong> ST. Peter's School, Dabra (M.P) & B.Tech 1st Year</span>
+                </div>
+                <div class="resume-point">
+                  <i class="fa-solid fa-circle-check neon-cyan"></i>
+                  <span><strong>Key Skills:</strong> Python, DSA, Git/GitHub, Scikit-learn, Problem Solving</span>
+                </div>
+                <div class="resume-point">
+                  <i class="fa-solid fa-circle-check neon-purple"></i>
+                  <span><strong>Interests:</strong> Real-world AI project integration & Startup concepts</span>
+                </div>
+                <div class="resume-point">
+                  <i class="fa-solid fa-circle-check neon-magenta"></i>
+                  <span><strong>Format:</strong> Clean, 1-Page ATS-compliant standard structure</span>
+                </div>
+              </div>
+
+              <div class="resume-status-strip">
+                <span class="status-chip"><i class="fa-solid fa-clock"></i> Updated for 2026</span>
+                <span class="status-chip"><i class="fa-solid fa-bolt"></i> Internship Ready</span>
+              </div>
+
+              <div class="resume-buttons-group">
+                <button id="download-resume-btn" class="btn btn-neon-emerald btn-lg">
+                  <i class="fa-solid fa-file-pdf"></i> Download PDF Resume
+                </button>
+                <button id="preview-resume-modal-btn" class="btn btn-outline-cyan">
+                  <i class="fa-solid fa-eye"></i> Preview Interactive Resume
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. CONTACT SECTION ==================== -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container">
+        <div class="section-header reveal-on-scroll text-center">
+          <span class="section-subtitle">&lt;initiate-transmission /&gt;</span>
+          <h2 class="section-title">Get In <span class="neon-cyan">Touch</span></h2>
+          <div class="section-title-bar"></div>
+          <p class="section-desc">
+            Have a project idea, want to collaborate on AI/ML prototypes, or discuss startup concepts? Let's connect!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details Cards -->
+          <div class="contact-info-column reveal-on-scroll">
+            <h3 class="contact-subheading">Direct Channels</h3>
+            
+            <!-- Email Card -->
+            <div class="contact-card glass-card">
+              <div class="contact-icon cyan">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Email Address</span>
+                <a href="mailto:adityasoni.ai@gmail.com" class="contact-val" id="email-text">adityasoni.ai@gmail.com</a>
+              </div>
+              <button class="copy-btn" data-copy="adityasoni.ai@gmail.com" title="Copy Email" aria-label="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-card glass-card">
+              <div class="contact-icon purple">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Contact Number</span>
+                <a href="tel:+919876543210" class="contact-val" id="phone-text">+91 98765 43210</a>
+              </div>
+              <button class="copy-btn" data-copy="+91 98765 43210" title="Copy Phone Number" aria-label="Copy Phone Number">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- LinkedIn Profile Card -->
+            <div class="contact-card glass-card">
+              <div class="contact-icon emerald">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">LinkedIn Profile</span>
+                <a href="https://linkedin.com/in/aditya-soni" target="_blank" rel="noopener noreferrer" class="contact-val">
+                  linkedin.com/in/aditya-soni <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Location / Roots Card -->
+            <div class="contact-card glass-card">
+              <div class="contact-icon magenta">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-details">
+                <span class="contact-label">Location / Origin</span>
+                <span class="contact-val">Dabra, Madhya Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-column reveal-on-scroll">
+            <div class="contact-form-card glass-card">
+              <h3 class="contact-subheading">Send a Transmission</h3>
+              <p class="form-desc">Fill out this quick form and I will respond to your transmission promptly.</p>
+
+              <form id="contact-form" class="tech-form">
+                <div class="form-group">
+                  <label for="form-name"><i class="fa-regular fa-user"></i> Your Name</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Alex Morgan" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-email"><i class="fa-regular fa-envelope"></i> Your Email</label>
+                  <input type="email" id="form-email" required placeholder="alex@domain.com" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject"><i class="fa-solid fa-tag"></i> Subject</label>
+                  <select id="form-subject" class="form-input">
+                    <option value="Collaboration">Project Collaboration</option>
+                    <option value="Startup">Startup Idea Discussion</option>
+                    <option value="Internship">Internship Opportunity</option>
+                    <option value="General">General Inquiries / Networking</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message"><i class="fa-regular fa-message"></i> Message</label>
+                  <textarea id="form-message" rows="4" required placeholder="Tell me about your project or what you'd like to build together..." class="form-input"></textarea>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="btn btn-neon-cyan btn-block">
+                  <i class="fa-solid fa-paper-plane"></i> Transmit Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="tech-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">
+          &lt;Aditya Soni /&gt;
+        </a>
+        <p class="footer-tagline">1st Year B.Tech • AI/ML Practitioner & Problem Solver</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/aditya-soni" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:adityasoni.ai@gmail.com" aria-label="Email" class="social-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="footer-right">
+        <p>&copy; <span id="current-year">2026</span> Aditya Soni. Built with Neon Dark Tech UI.</p>
+        <button id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+          <i class="fa-solid fa-angle-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: FULLSCREEN CERTIFICATE ==================== -->
+  <div class="modal-backdrop" id="cert-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fa-solid fa-certificate neon-cyan"></i> AI Verification Certificate</h3>
+        <button class="modal-close" id="cert-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="cert-modal-content">
+        <!-- Rendered dynamically or cloned -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-glass" id="modal-cert-close-btn">Close</button>
+        <button class="btn btn-neon-cyan" id="modal-cert-download-btn">
+          <i class="fa-solid fa-download"></i> Download PNG/PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: INTERACTIVE RESUME PREVIEW ==================== -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <h3 class="modal-title"><i class="fa-solid fa-file-pdf neon-emerald"></i> Resume Preview — Aditya Soni</h3>
+        <button class="modal-close" id="resume-modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body resume-document-body" id="resume-document">
+        <!-- Structured ATS Printable Resume -->
+        <div class="doc-page">
+          <!-- Resume Header -->
+          <div class="doc-header">
+            <h1 class="doc-name">ADITYA SONI</h1>
+            <p class="doc-tagline">1st Year B.Tech Student | AI & Machine Learning Enthusiast</p>
+            <div class="doc-contacts">
+              <span><i class="fa-solid fa-envelope"></i> adityasoni.ai@gmail.com</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+              <span>•</span>
+              <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/aditya-soni</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-location-dot"></i> Dabra, M.P, India</span>
+            </div>
+          </div>
+
+          <hr class="doc-divider" />
+
+          <!-- Summary -->
+          <div class="doc-section">
+            <h2 class="doc-sec-title">PROFESSIONAL OBJECTIVE</h2>
+            <p class="doc-sec-content">
+              Enthusiastic and driven 1st-year B.Tech undergraduate with an active focus on Artificial Intelligence and Machine Learning. Passionate about engineering tangible, real-world AI projects and applying technology to scalable startup ideas. Eager to contribute strong analytical reasoning, algorithmic problem-solving, and continuous learning to technical internships and collaborative development teams.
+            </p>
+          </div>
+
+          <!-- Education -->
+          <div class="doc-section">
+            <h2 class="doc-sec-title">EDUCATION</h2>
+            <div class="doc-entry">
+              <div class="doc-entry-header">
+                <strong>Bachelor of Technology (B.Tech) — 1st Year</strong>
+                <span class="doc-date">2025 – 2029 (Expected)</span>
+              </div>
+              <div class="doc-institution">Engineering & Computer Science Disciplines</div>
+              <ul class="doc-bullets">
+                <li>Core Coursework: Problem Solving through Programming, Data Structures, Engineering Mathematics, Object-Oriented Systems.</li>
+                <li>Actively building algorithmic problem-solving consistency and exploring machine learning model architectures.</li>
+              </ul>
+            </div>
+
+            <div class="doc-entry">
+              <div class="doc-entry-header">
+                <strong>Senior Secondary & Secondary Education</strong>
+                <span class="doc-date">Completed</span>
+              </div>
+              <div class="doc-institution">ST. Peter's School, Dabra (Madhya Pradesh)</div>
+              <ul class="doc-bullets">
+                <li>Strong academic record with emphasis on Mathematics, Physics, and Computer Applications.</li>
+                <li>Participated in science exhibitions, quiz competitions, and leadership activities.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Technical Skills -->
+          <div class="doc-section">
+            <h2 class="doc-sec-title">TECHNICAL SKILLS</h2>
+            <div class="doc-skills-list">
+              <p><strong>Languages:</strong> Python (Proficient), Basic C/C++</p>
+              <p><strong>Data Structures & Algorithms:</strong> Arrays, Strings, Linked Lists, Stacks, Queues, Binary Search, Big-O Analysis</p>
+              <p><strong>Machine Learning & Data:</strong> Intro to ML, Scikit-learn, NumPy, Data Cleaning, Linear/Logistic Regression, Model Evaluation</p>
+              <p><strong>Tools & Version Control:</strong> Git, GitHub, VS Code, Jupyter Notebooks, Markdown</p>
+              <p><strong>Soft Skills:</strong> Analytical Problem Solving, Clear Technical Communication, Presentation, First-Principles Reasoning</p>
+            </div>
+          </div>
+
+          <!-- Key Projects / Focus Areas -->
+          <div class="doc-section">
+            <h2 class="doc-sec-title">ACADEMIC & APPLIED PROJECTS</h2>
+            <div class="doc-entry">
+              <div class="doc-entry-header">
+                <strong>Machine Learning Predictive Classifier Prototype</strong>
+                <span class="doc-date">Python, Scikit-learn, NumPy</span>
+              </div>
+              <ul class="doc-bullets">
+                <li>Developed an end-to-end classification pipeline for tabular datasets with feature scaling, cross-validation, and confusion matrix analysis.</li>
+                <li>Implemented clean Git version control with structured commits and documentation.</li>
+              </ul>
+            </div>
+
+            <div class="doc-entry">
+              <div class="doc-entry-header">
+                <strong>Algorithmic Solutions & DSA Implementations</strong>
+                <span class="doc-date">Python, Algorithmic Analysis</span>
+              </div>
+              <ul class="doc-bullets">
+                <li>Engineered clean Python implementations for core data structures with documented time and space complexity tradeoffs.</li>
+                <li>Demonstrated problem-solving rigor on algorithmic practice platforms.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Co-curricular & Interests -->
+          <div class="doc-section">
+            <h2 class="doc-sec-title">INTERESTS & ACTIVITIES</h2>
+            <p class="doc-sec-content">
+              Startup Case Study Analysis, Cycling (Endurance & Trail riding), Cinema narrative analysis, AI/ML Tech Meetups.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-glass" id="modal-resume-close-btn">Close</button>
+        <button class="btn btn-neon-emerald" id="modal-resume-print-btn">
+          <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== LIVE CURSOR-TRACKING PANDA COMPANION ==================== -->
+  <div id="panda-companion" class="panda-companion pos-home" title="Click me! 🐼">
+    <!-- Speech Bubble -->
+    <div id="panda-speech" class="panda-speech-bubble">
+      <span id="panda-speech-text">Hi! I'm Koko the Tech Panda 🐼</span>
+      <div class="bubble-arrow"></div>
+    </div>
+
+    <!-- Panda SVG Figure -->
+    <div class="panda-avatar-box">
+      <svg class="panda-svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="pandaCheek" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ff769c" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#ff769c" stop-opacity="0" />
+          </radialGradient>
+          <filter id="neonGlowCyan" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#00f0ff" flood-opacity="0.8"/>
+          </filter>
+        </defs>
+
+        <!-- Body / Base -->
+        <ellipse cx="70" cy="115" rx="34" ry="20" fill="#131926" stroke="#00f0ff" stroke-width="1.5" />
+        <ellipse cx="70" cy="116" rx="22" ry="12" fill="#242e42" />
+
+        <!-- Ears -->
+        <g class="panda-ears">
+          <!-- Left Ear -->
+          <circle cx="34" cy="36" r="18" fill="#131926" stroke="#00f0ff" stroke-width="1.5" />
+          <circle cx="34" cy="36" r="10" fill="#242e42" />
+          <!-- Right Ear -->
+          <circle cx="106" cy="36" r="18" fill="#131926" stroke="#00f0ff" stroke-width="1.5" />
+          <circle cx="106" cy="36" r="10" fill="#242e42" />
+        </g>
+
+        <!-- Head Contour -->
+        <rect x="22" y="30" width="96" height="82" rx="41" fill="#f8fafc" stroke="#131926" stroke-width="2.5" />
+
+        <!-- Cyber Headband / Neon Accent -->
+        <path d="M 28 44 Q 70 52 112 44" stroke="#00f0ff" stroke-width="3" fill="none" filter="url(#neonGlowCyan)" />
+        <circle cx="70" cy="48" r="4.5" fill="#00ff9d" filter="url(#neonGlowCyan)" />
+        <path d="M 64 48 L 76 48" stroke="#ffffff" stroke-width="1" />
+
+        <!-- Blush Cheeks -->
+        <ellipse cx="36" cy="84" rx="9" ry="5" fill="url(#pandaCheek)" />
+        <ellipse cx="104" cy="84" rx="9" ry="5" fill="url(#pandaCheek)" />
+
+        <!-- Eye Patches (Iconic tilted black patches) -->
+        <ellipse cx="48" cy="68" rx="16" ry="19" transform="rotate(-15 48 68)" fill="#131926" />
+        <ellipse cx="92" cy="68" rx="16" ry="19" transform="rotate(15 92 68)" fill="#131926" />
+
+        <!-- Eyeballs (White Sclera) -->
+        <ellipse id="panda-eye-left-sclera" cx="50" cy="67" rx="9" ry="11" fill="#ffffff" />
+        <ellipse id="panda-eye-right-sclera" cx="90" cy="67" rx="9" ry="11" fill="#ffffff" />
+
+        <!-- Left Pupil (Cursor Tracking) -->
+        <g id="panda-pupil-left" class="panda-pupil">
+          <ellipse cx="50" cy="67" rx="6" ry="7" fill="#070a13" />
+          <circle cx="48" cy="64" r="2.2" fill="#ffffff" />
+          <circle cx="52" cy="69" r="1.3" fill="#00f0ff" />
+        </g>
+
+        <!-- Right Pupil (Cursor Tracking) -->
+        <g id="panda-pupil-right" class="panda-pupil">
+          <ellipse cx="90" cy="67" rx="6" ry="7" fill="#070a13" />
+          <circle cx="88" cy="64" r="2.2" fill="#ffffff" />
+          <circle cx="92" cy="69" r="1.3" fill="#00f0ff" />
+        </g>
+
+        <!-- Eyelids for Autonomous Blinking -->
+        <rect class="panda-eyelid eyelid-left" x="39" y="55" width="22" height="24" rx="11" fill="#131926" />
+        <rect class="panda-eyelid eyelid-right" x="79" y="55" width="22" height="24" rx="11" fill="#131926" />
+
+        <!-- Snout / Nose -->
+        <ellipse cx="70" cy="80" rx="7" ry="5" fill="#131926" />
+        <circle cx="68" cy="79" r="1.5" fill="#ffffff" opacity="0.6" />
+
+        <!-- Mouth -->
+        <path d="M 64 86 Q 70 91 76 86" fill="none" stroke="#131926" stroke-width="2.5" stroke-linecap="round" />
+
+        <!-- Paws Peeking -->
+        <ellipse cx="44" cy="112" rx="13" ry="9" fill="#131926" stroke="#00f0ff" stroke-width="1.5" />
+        <circle cx="44" cy="112" r="4" fill="#ff769c" opacity="0.7" />
+        <ellipse cx="96" cy="112" rx="13" ry="9" fill="#131926" stroke="#00f0ff" stroke-width="1.5" />
+        <circle cx="96" cy="112" r="4" fill="#ff769c" opacity="0.7" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Custom Scripts -->
+  <script src="js/certificate.js"></script>
+  <script src="js/resume.js"></script>
+  <script src="js/panda.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
